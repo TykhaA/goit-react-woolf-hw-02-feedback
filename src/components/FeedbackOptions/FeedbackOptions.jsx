@@ -1,10 +1,11 @@
 import style from './feedbackOptions.module.css'
 
-const FeedbackOptions = ({handleClick}) => {
+const FeedbackOptions = ({handleClick, options}) => {
         return (<div className={style.feedback_options} >
-               <button className={style.btn} name='countGood' onClick={handleClick}>good</button>
-               <button className={style.btn} name='countNeutral' onClick={handleClick}>neutral</button>
-               <button className={style.btn} name='countBad' onClick={handleClick}>bad</button>
+                {options.map((elem) =>{
+                       return (<button className={style.btn} name={elem.name} onClick={handleClick}>{elem.value}</button>) 
+                })
+                }
             </div>)
 
 }

@@ -35,10 +35,23 @@ class App extends Component {
        } )
        console.log (this.state)
   }
-  
+ options = [
+    {
+    name: 'countGood', 
+    value: 'Good'
+  },
+  {
+    name: 'countNeutral', 
+    value: 'Neutral'
+  },
+  {
+    name: 'countBad', 
+    value: 'Bad'
+  }
+]
   render(){
       return (<><Section title='Please leave feedback'>
-                <FeedbackOptions handleClick={this.handleClick}></FeedbackOptions>
+                <FeedbackOptions handleClick={this.handleClick} options={this.options}></FeedbackOptions>
             </Section>
             <Section title='Statistics'>
         {!this.state.total ? <Notification message='There is no feedback'/> : <Statistics countGood={this.state.countGood} countNeutral={this.state.countNeutral} countBad={this.state.countBad} total={this.state.total} positiveFeedback={this.state.positiveFeedback}/>}            </Section></>)
