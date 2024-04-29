@@ -1,20 +1,20 @@
 // import {Component} from 'react'
 import style from './statistics.module.css'
 
-const Statistics = ({countGood, countNeutral, countBad, total, positiveFeedback}) => {
+const Statistics = ({good, neutral, bad, total, positiveFeedback}) => {
     
         return ( <div className={style.list}>
            <div className={style.item}>
                <div className={style.option}>Good:</div>
-               <div className={style.value}>{countGood}</div>
+               <div className={style.value}>{good}</div>
            </div>
            <div className={style.item}>
                <div className={style.option}>Neutral:</div>
-               <div className={style.value}>{countNeutral}</div>
+               <div className={style.value}>{neutral}</div>
            </div>
            <div className={style.item}>
                <div className={style.option}>Bad:</div>
-               <div className={style.value}>{countBad}</div>
+               <div className={style.value}>{bad}</div>
            </div>
            <div className={style.item}>
                <div className={style.option}>Total:</div>
